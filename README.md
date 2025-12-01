@@ -54,7 +54,7 @@ ComfyUI 自带的 `--lowvram` 参数有时会失效或导致其他节点报错�
 ### ⚠️ 性能提示
 **稳定压倒一切。**
 由于插件强制 GPU 在每一步计算前进行同步和清理，阻断了部分并行加速，生成速度可能会下降 **5% - 15%**。
-*   **推荐场景：** 当你的工作流因为爆显存而**完全跑不通**，或者频繁报错时，请务必使用本插件。
+*   **推荐场景：** 当你的工作流因为爆显存而**完全跑不通**，或者频繁报错时，请务必试用本插件。
 *   **不推荐场景：** 如果你的显存非常充足，且运行非常稳定，则不需要使用本插件。
 
 ---
@@ -109,7 +109,7 @@ Since this strategy offloads VRAM data to your System RAM during processing, ade
 ### ⚠️ Performance Note
 **Stability > Speed.**
 Since this node forces the GPU to synchronize and clean memory at every single step, preventing some parallel acceleration, generation speed may decrease by **5% - 15%**.
-*   **Recommended:** Use this when your workflow **cannot run** due to OOM or crashes.
+*   **Recommended:** Try to use this when your workflow **cannot run** due to OOM or crashes.
 *   **Not Recommended:** If your VRAM is sufficient and workflows run stably, you do not need this node.
 
 ---
@@ -117,3 +117,4 @@ Since this node forces the GPU to synchronize and clean memory at every single s
 ### 📄 License
 
 MIT License
+
