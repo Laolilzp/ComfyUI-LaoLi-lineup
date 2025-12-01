@@ -5,7 +5,7 @@
 ---
 
 <a name="中文说明"></a>
-## 🇨🇳 中文说明
+## 中文说明
 
 **ComfyUI 的显存交通指挥。用于显存有限时使用大体积模型卡顿/爆显存，特别是 Flux/Qwen 等大模型挂载 ControlNet 时的爆显存、假死问题。**
 
@@ -60,7 +60,7 @@ ComfyUI 自带的 `--lowvram` 参数有时会失效或导致其他节点报错�
 ---
 
 <a name="english"></a>
-## 🇬🇧 English
+## English
 
 **The "VRAM Traffic Controller" for ComfyUI. Solves OOM crashes and system freezes when running massive models (Flux/Qwen/Wan2.2) with ControlNet on limited VRAM.**
 
@@ -117,4 +117,5 @@ Since this node forces the GPU to synchronize and clean memory at every single s
 ### 📄 License
 
 MIT License
+
 
