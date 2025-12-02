@@ -46,7 +46,8 @@ ComfyUI 自带的 `--lowvram` 参数有时会失效或导致其他节点报错�
     git clone https://github.com/Laolilzp/ComfyUI-LaoLi-lineup.git
     ```
 3.  重启 ComfyUI。
-<img width="785" height="274" alt="image" src="https://github.com/user-attachments/assets/eaeed326-e390-4a2c-b743-bb7f590e2abc" />
+<img width="636" height="225" alt="image" src="https://github.com/user-attachments/assets/88c8b574-0b87-4811-b1ed-9b0a47aea88a" />
+
 
 ### 🔧 使用说明
 
@@ -106,7 +107,8 @@ Since this strategy offloads VRAM data to your System RAM during processing, ade
     git clone https://github.com/Laolilzp/ComfyUI-LaoLi-lineup.git
     ```
 3.  Restart ComfyUI.
-<img width="785" height="274" alt="image" src="https://github.com/user-attachments/assets/64274757-95e4-4b32-a946-838fef99dbcf" />
+<img width="636" height="225" alt="image" src="https://github.com/user-attachments/assets/78d61fed-efde-418a-a3a4-b730c9e147ca" />
+
 
 ### 🔧 Usage
 
@@ -127,6 +129,7 @@ Since this node forces the GPU to synchronize and clean memory at every single s
 ### 📄 License
 
 MIT License
+
 
 
 
