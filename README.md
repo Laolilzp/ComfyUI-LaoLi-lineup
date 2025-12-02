@@ -25,6 +25,11 @@ ComfyUI 自带的 `--lowvram` 参数有时会失效或导致其他节点报错�
 *   **🧠 零配置全自动：** 不需要手动设置层数，代码自动适配 Flux1/2, SDXL, Qwen, Wan2.2, SD1.5 等各种架构。
 *   **🤝 原生兼容：** 不暴力搬运内存（这容易导致报错），而是利用 ComfyUI 原生机制进行强制管理，稳定第一。
 
+### ⚠️ 兼容性重要提示 (必读)
+本插件仅支持 **ComfyUI 标准模型类型 (`MODEL`)**。
+*   **✅ 支持：** `Load Checkpoint`, `UNET Loader`, `Load Diffusion Model` 等原生节点加载的模型（包括 Flux, SDXL, Pony, QwenImage 等）。
+*   **❌ 不支持：** 使用非标准封装类型的插件，例如 **`ComfyUI-WanVideoWrapper`** (其使用的是 `WANVIDEOMODEL` 类型)。这些插件通常自带了显存管理机制，无法与本插件串联。
+
 ### 💻 硬件要求
 由于本插件会将大量显存数据临时暂存到系统内存（RAM）中，因此对**内存容量**有一定要求：
 *   **✅ 推荐：64GB 或以上** 系统内存（最佳稳定性，从容应对数据交换）。
@@ -55,8 +60,8 @@ ComfyUI 自带的 `--lowvram` 参数有时会失效或导致其他节点报错�
 **稳定压倒一切。**
 由于插件强制 GPU 在每一步计算前进行同步和清理，阻断了部分并行加速，生成速度可能会下降 **5% - 15%**。
 *   **推荐场景：** 当你的工作流因为爆显存而**完全跑不通**，或者频繁报错时，请务必试用本插件。
-*   **不推荐场景：** 如果你的显存非常充足，且运行非常稳定，则不需要使用本插件。
-
+*   **不推荐场景：** 如果你的显存非常充足，且运行非常稳定，则不需要使用本插件。不建议GGUF类型的模型使用该节点。
+   
 ---
 
 <a name="english"></a>
@@ -79,6 +84,11 @@ This node implements a strict **"Step-by-Step Cleaning"** strategy. It automatic
 *   **🛡️ Ultimate Crash Protection:** Acts like a strict memory janitor. It ensures the GPU is clean before the next layer loads, ensuring large models like ControlNet always have continuous space available.
 *   **🧠 Zero Config:** Automatically detects model architectures, including **Flux1/2, SDXL, Qwen, Wan2.2, SD1.5**, etc. No manual setup required.
 *   **🤝 Native Compatibility:** Does not move memory tensors manually (which causes bugs). Instead, it leverages ComfyUI's native memory manager to enforce cleanliness.
+
+### ⚠️ Compatibility Note (Important)
+This node only supports the **Standard ComfyUI Model Type (`MODEL`)**.
+*   **✅ Supported:** Models loaded via `Load Checkpoint`, `UNET Loader`, etc. (Flux, SDXL, Pony, QwenImage).
+*   **❌ Not Supported:** Custom wrappers like **`ComfyUI-WanVideoWrapper`** (which uses the `WANVIDEOMODEL` type). These suites typically have their own memory management and cannot be connected to this node.
 
 ### 💻 Hardware Requirements
 Since this strategy offloads VRAM data to your System RAM during processing, adequate memory is crucial:
@@ -117,5 +127,6 @@ Since this node forces the GPU to synchronize and clean memory at every single s
 ### 📄 License
 
 MIT License
+
 
 
