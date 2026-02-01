@@ -1,4 +1,4 @@
-# 🚀 ComfyUI-LaoLi-lineup (老李显存排队) （本插件已由Comfyui-Laoli-Shadow 升级代替）
+# 🚀 ComfyUI-LaoLi-lineup (显存排队独立版本) 
 
 **[中文说明](#中文说明) | [English](#english)**
 
@@ -133,4 +133,5 @@ Instead of cleaning memory blindly at every step,  uses **Active Monitoring**:
 
 ### 📄 License
 MIT License
+
 
